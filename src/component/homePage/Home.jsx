@@ -3,6 +3,7 @@ import Card from '../card/Card'
 import ImageSection from '../imgSec/ImageSection'
 import Heading from '../heading/Heading'
 import Mymap from '../map/Mymap'
+import Mymap1 from '../map/Mymap1'
 
 function Home() {
   return (

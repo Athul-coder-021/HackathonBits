@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './ratingSysIndex.css';
-import img from './hotel.jpg';
-// import blueMarkerIconUrl from './bluemarkeicon.webp'; // Import the blue marker icon
+import img from '../ratingsystem/hotel.jpg';
+// import blueMarkerIconUrl from '../bluemarkeicon.jpg'; // Import the blue marker icon
 
-const RatingMap = () => {
+const LeafletMap = () => {
     useEffect(() => {
         const map = L.map('mapid').setView([28.3591, 75.5882], 13);
 
@@ -79,4 +79,4 @@ const RatingMap = () => {
     );
 };
 
-export default RatingMap;
+export default LeafletMap;

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
             <img src={logo} className="h-8" alt="Flowbite Logo" />
-            <span className="self-center text-xl font-semibold whitespace-nowrap">NEAR BY ME</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap">NEAR BY NOW</span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
             <li>

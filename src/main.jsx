@@ -5,7 +5,7 @@ import Home from './component/homePage/Home'
 import About from './component/aboutPage/About'
 import Service from '../src/component/servicePage/Service.jsx'
 import ServiceHospitsals from '../src/component/servicePage/ServiceHospitsals.jsx'
-import ServiceResturants from '../src/component/servicePage/ServiceResturants.jsx'
+import ServiceResturant from '../src/component/servicePage/ServiceRestaurant.jsx'
 import ServiceHotels  from '../src/component/servicePage/ServiceHotels.jsx'
 import ServiceBasic  from '../src/component/servicePage/ServiceBasic.jsx'
 import ServiceNear from '../src/component/servicePage/ServiceNear.jsx'
@@ -17,7 +17,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />} >
       <Route path='' element={<Home />} />
       <Route path='about' element={<About /> }/>
-      <Route path='serviceResturants' element={<ServiceResturants /> }/>
+      <Route path='serviceRestaurant' element={<ServiceResturant /> }/>
       <Route path='serviceHospitals' element={<ServiceHospitsals /> }/>
       <Route path='serviceHotels' element={<ServiceHotels /> }/>
       <Route path='serviceBasic' element={<ServiceBasic /> }/>

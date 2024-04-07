@@ -7,7 +7,7 @@ import { Dropdown } from 'primereact/dropdown';
 function StickyNav() {
   const [percent, setPercent] = useState(0);
   const [selectedCity, setSelectedCity] = useState('');
-  const cities = ['Hospitals', 'Restaurants', 'Hotels', 'Basic', 'Near'];
+  const cities = ['Hospitals', 'Restaurant', 'Hotels', 'Basic', 'Near'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +34,8 @@ function StickyNav() {
 
 
   return (
-    <div className="sticky-nav mt-8 z-50 ">
-      <nav className="flex justify-around py-4 bg-white/80 backdrop-blur-md shadow-md w-full fixed top-0 left-0 right-0 ">
+    <div className="sticky-nav mt-12 z-50 ">
+      <nav className="flex justify-around py-2 bg-white/80 backdrop-blur-md shadow-md w-full fixed top-0 left-0 right-0 ">
         <div className="flex items-center">
           <a className="cursor-pointer">
             <div className="text-2xl font-medium text-blue-500 flex">

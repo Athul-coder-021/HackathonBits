@@ -3,7 +3,7 @@ import L from 'leaflet';
 import 'leaflet-control-geocoder';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
-import 'leaflet/dist/images/marker-shadow.png'; 
+import 'leaflet/dist/images/marker-shadow.png';
 import SearchBar from './SearchBar';
 
 const OpenStreetMap = () => {
@@ -48,8 +48,7 @@ const OpenStreetMap = () => {
 
                     // Add user's marker
                     const userMarker = L.marker(userLocation, { icon: redMarkerIcon }).addTo(map);
-                    userMarker.bindPopup('<strong>Your Location</strong>').openPopup();
-
+                    userMarker.bindPopup('Your Location').openPopup();
                     try {
                         // Fetch nearby restaurants using Overpass API
                         const restaurantResponse = await fetch(`https://overpass-api.de/api/interpreter?data=[out:json];node[amenity=restaurant](around:5000,${position.coords.latitude},${position.coords.longitude});out;`);
@@ -72,7 +71,6 @@ const OpenStreetMap = () => {
                             L.marker(restaurantLocation, { icon: blueMarkerIcon }).addTo(map)
                                 .bindPopup(`<strong>${place.tags.name}</strong><br>Distance: ${distance.toFixed(2)} meters`);
                         });
-
                         // Fetch nearby hospitals using Overpass API
                         const hospitalResponse = await fetch(`https://overpass-api.de/api/interpreter?data=[out:json];node[amenity=hospital](around:5000,${position.coords.latitude},${position.coords.longitude});out;`);
                         const hospitalData = await hospitalResponse.json();
@@ -80,6 +78,7 @@ const OpenStreetMap = () => {
                         // Custom green marker icon for hospitals
                         const greenMarkerIcon = L.icon({
                             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+
                             iconSize: [25, 41],
                             iconAnchor: [12, 41],
                             popupAnchor: [1, -34],
@@ -172,6 +171,10 @@ const OpenStreetMap = () => {
                             L.marker(parkLocation, { icon: yellowMarkerIcon }).addTo(map)
                                 .bindPopup(`<strong>Park</strong><br>Distance: ${distance.toFixed(2)} meters`);
                         });
+
+
+
+
                     } catch (error) {
                         console.error('Error fetching nearby amenities:', error);
                     }
@@ -184,10 +187,13 @@ const OpenStreetMap = () => {
 
     return (
         <>
-        {/* <SearchBar/> */}
-            <div id="map" style={{ height: '600px', width: '80%', margin: '100px auto', zIndex: 0 }}></div>
+            {/* <SearchBar/> */}
+            <div id="map" style={{ height: '600px', width: '80%', margin: '10px 200px', zIndex: 0 }}></div>
+            <div><textarea></textarea></div>
         </>
     );
 };
 
 export default OpenStreetMap;
+
+
