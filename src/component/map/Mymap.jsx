@@ -188,7 +188,7 @@ const OpenStreetMap = () => {
     return (
         <>
             {/* <SearchBar/> */}
-            <div id="map" style={{ height: '600px', width: '80%', margin: '10px 200px', zIndex: 0 }}></div>
+            <div id="map" style={{ height: '600px', width: '80%', margin: '5% 10%', zIndex: 0 }}></div>
             <div><textarea></textarea></div>
         </>
     );
