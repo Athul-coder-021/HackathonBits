@@ -24,7 +24,7 @@ export default function Footer() {
           </ul>
         </div>
         <hr className="my-6 border-gray-700" />
-        <span className="text-sm text-gray-500 sm:text-center">© 2023 </span><a href="http://localhost:5173/" className="hover:text-yellow-300">Nearby Now™</a>. <span>All Rights Reserved.</span>
+        <span className="text-sm text-gray-500 sm:text-center">© 2024 </span><a href="http://localhost:5173/" className="hover:text-yellow-300">Nearby Now™</a>. <span>All Rights Reserved.</span>
       </div>
     </footer>
   );
